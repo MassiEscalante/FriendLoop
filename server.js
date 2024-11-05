@@ -10,6 +10,8 @@ const db = require('./config/connection');
 // Initialize the app and set the port from environment variable or default to 3001
 const app = express();
 const PORT = process.env.PORT || 3001;
+const User = require('./models/User');
+const Thought = require('./models/Thought');
 
 // Middleware for parsing JSON and URL-encoded data
 app.use(express.json());
