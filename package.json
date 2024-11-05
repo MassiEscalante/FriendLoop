@@ -1,21 +1,21 @@
 {
-    "name": "friendloop-api",
-    "version": "1.0.0",
-    "description": "FriendLoop - A social network API for sharing thoughts and building friend connections.",
-    "main": "server.js",
-    "scripts": {
-      "start": "node server.js",
-      "dev": "nodemon server.js"
-    },
-    "author": "Your Name",
-    "license": "MIT",
-    "dependencies": {
-      "express": "^4.18.2",
-      "mongoose": "^7.0.1",
-      "dotenv": "^16.0.3",
-      "moment": "^2.29.4"
-    },
-    "devDependencies": {
-      "nodemon": "^2.0.20"
-    }
+  "name": "friendloop-api",
+  "version": "1.0.0",
+  "description": "FriendLoop - A social network API for sharing thoughts and building friend connections.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1",
+    "dotenv": "^16.0.3",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
+}
