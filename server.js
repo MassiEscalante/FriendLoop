@@ -5,6 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
+const db = require('./config/connection');
 
 // Initialize the app and set the port from environment variable or default to 3001
 const app = express();
