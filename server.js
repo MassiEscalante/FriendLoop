@@ -10,8 +10,8 @@ const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Middleware for parsing JSON and URL-encoded data
-app.use(express.json());
+// Middleware for parsing JSON and URL-encoded data for POST and PUT requests only
+app.use(express.json({ type: ['application/json', 'text/plain'] }));
 app.use(express.urlencoded({ extended: true }));
 
 // Route handling
