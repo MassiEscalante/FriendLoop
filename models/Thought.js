@@ -1,35 +1,6 @@
-const { Schema, model, Types } = require('mongoose');
-const moment = require('moment'); // Optional: Using moment.js to format dates
-
-// Reaction schema definition (not a full model, just a schema for nested documents)
-const reactionSchema = new Schema(
-  {
-    reactionId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(), // Default to a new ObjectId
-    },
-    reactionBody: {
-      type: String,
-      required: true,
-      maxlength: 280, // 280-character limit
-    },
-    username: {
-      type: String,
-      required: true,
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (timestamp) => moment(timestamp).format('MMM DD, YYYY [at] hh:mm a'), // Format date with moment
-    },
-  },
-  {
-    toJSON: {
-      getters: true, // Enable getters for date formatting
-    },
-    id: false,
-  }
-);
+const { Schema, model } = require('mongoose');
+const moment = require('moment');
+const reactionSchema = require('./Reaction'); // Import the Reaction schema
 
 // Thought schema definition
 const thoughtSchema = new Schema(
@@ -43,13 +14,13 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (timestamp) => moment(timestamp).format('MMM DD, YYYY [at] hh:mm a'), // Format date
+      get: (timestamp) => moment(timestamp).format('MMM DD, YYYY [at] hh:mm a'), // Format date with moment
     },
     username: {
       type: String,
       required: true,
     },
-    reactions: [reactionSchema], // Array of reactions (nested documents)
+    reactions: [reactionSchema], // Array of reactions using the imported Reaction schema
   },
   {
     toJSON: {
