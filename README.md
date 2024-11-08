@@ -33,6 +33,10 @@ FriendLoop aims to provide a clean and robust solution for handling social netwo
 
 FriendLoop leverages a combination of Express.js and MongoDB for flexible, unstructured data storage. The API provides multiple endpoints to handle CRUD operations on users and thoughts, with additional nested routes for friends and reactions. Each interaction is structured to handle high amounts of data, allowing the API to scale for larger social networking applications.
 
+## 🎥 Demo Video
+
+[Click here to view the walkthrough video](https://drive.google.com/file/d/1rdADEagzXIopTuB3Zn1G39h05NHXN8DZ/view)
+
 ## 🧗 Challenges Faced & Lessons Learned
 
 Building FriendLoop taught us how to structure a database for efficient querying in a social network environment. Some of the challenges included:
@@ -41,6 +45,7 @@ Building FriendLoop taught us how to structure a database for efficient querying
 - Creating virtual properties to count items efficiently.
 
 Each challenge deepened our understanding of database relationships, NoSQL data handling, and best practices for API structure.
+
 
 ## 📈 Future Plans
 
